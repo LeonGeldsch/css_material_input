@@ -1,0 +1,60 @@
+:root {
+    --main-blue: #90caf9;
+    --main-white: #fff;
+    --main-grey: rgba(255, 255, 255, 0.23);
+    --main-dark-grey: #121212;
+}
+
+body {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    background-color: #121212;
+    color: var(--main-white);
+}
+
+.page-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.outlined-input {
+    position: relative;
+}
+
+.outlined-input input {
+    color: var(--main-white);
+    height: 4rem;
+    outline: 1px solid var(--main-grey);
+    border-radius: 5px;
+    border: none;
+    background-color: var(--main-dark-grey);
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.outlined-input label {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    background-color: var(--main-dark-grey);
+    text-align: center;
+    transition: .2s ease-in-out;
+    font-size: 1.5rem;
+    pointer-events: none;
+    padding: 0 5px;
+}
+
+.outlined-input input:not(:placeholder-shown) ~ label,
+.outlined-input input:focus ~ label {
+    top: 0px;
+    left: 10px;
+    font-size: 1rem;
+    color: var(--main-blue);
+}
+
+.outlined-input input:focus {
+    outline: 1px solid var(--main-blue);
+}
