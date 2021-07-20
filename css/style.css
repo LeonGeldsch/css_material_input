@@ -40,6 +40,7 @@ body {
     left: 5%;
     transform: translateY(-50%);
     background-color: var(--main-dark-grey);
+    color: var(--main-white);
     text-align: center;
     transition: .2s ease-in-out;
     font-size: 1.5rem;
@@ -52,9 +53,11 @@ body {
     top: 0px;
     left: 10px;
     font-size: 1rem;
-    color: var(--main-blue);
 }
 
 .outlined-input input:focus {
     outline: 1px solid var(--main-blue);
+}
+.outlined-input input:focus ~ label {
+    color: var(--main-blue);
 }
