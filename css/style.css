@@ -32,6 +32,7 @@ body {
     background-color: var(--main-dark-grey);
     padding-left: 20px;
     font-size: 20px;
+    transition: .1s ease-in-out;
 }
 
 .outlined-input label {
@@ -40,7 +41,7 @@ body {
     left: 5%;
     transform: translateY(-50%);
     background-color: var(--main-dark-grey);
-    color: var(--main-white);
+    color: rgba(255, 255, 255, 0.5);
     text-align: center;
     transition: .2s ease-in-out;
     font-size: 1.5rem;
@@ -56,8 +57,11 @@ body {
 }
 
 .outlined-input input:focus {
-    outline: 1px solid var(--main-blue);
+    outline: 1px solid var(--main-blue) !important;
+}
+.outlined-input input:hover {
+    outline: 1px solid var(--main-white);
 }
 .outlined-input input:focus ~ label {
-    color: var(--main-blue);
+    color: var(--main-blue) !important;
 }
