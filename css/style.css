@@ -3,6 +3,7 @@
     --main-white: #fff;
     --main-grey: rgba(255, 255, 255, 0.23);
     --main-dark-grey: #121212;
+    --main-ease: cubic-bezier(.65,.05,.36,1);
 }
 
 body {
@@ -15,9 +16,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 30px;
     height: 100vh;
     width: 100vw;
 }
+
+
+/* OUTLINED INPUT STYLES */
 
 .outlined-input {
     position: relative;
@@ -32,7 +37,7 @@ body {
     background-color: var(--main-dark-grey);
     padding-left: 20px;
     font-size: 20px;
-    transition: .1s ease-in-out;
+    transition: .1s var(--main-ease);
 }
 
 .outlined-input label {
@@ -43,7 +48,7 @@ body {
     background-color: var(--main-dark-grey);
     color: rgba(255, 255, 255, 0.5);
     text-align: center;
-    transition: .2s ease-in-out;
+    transition: .2s var(--main-ease);
     font-size: 1.5rem;
     pointer-events: none;
     padding: 0 5px;
@@ -65,3 +70,69 @@ body {
 .outlined-input input:focus ~ label {
     color: var(--main-blue) !important;
 }
+
+/* END OUTLINED INPUT STYLES */
+
+
+
+/* STANDARD INPUT STYLES */
+
+.standard-input {
+    position: relative;
+}
+
+.standard-input input {
+    color: var(--main-white);
+    height: 4rem;
+    border: none;
+    border-bottom: 1px solid var(--main-grey);
+    background-color: var(--main-dark-grey);
+    padding-left: 20px;
+    font-size: 20px;
+    transition: .1s var(--main-ease));
+    outline: none;
+    box-sizing: border-box;
+}
+
+.standard-input label {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    background-color: var(--main-dark-grey);
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    transition: .2s var(--main-ease);
+    font-size: 1.5rem;
+    pointer-events: none;
+    padding: 0 5px;
+}
+
+.standard-input input:not(:placeholder-shown) ~ label,
+.standard-input input:focus ~ label {
+    top: 0px;
+    left: 10px;
+    font-size: 1rem;
+}
+
+.standard-input .underline {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: transform 0.2s var(--main-ease);
+    border-bottom: 2px solid var(--main-blue);
+}
+
+.standard-input input:focus ~ .underline {
+    transform: scaleX(1);
+}
+.standard-input input:hover {
+    border-bottom: 2px solid var(--main-white);
+}
+.standard-input input:focus ~ label {
+    color: var(--main-blue) !important;
+}
+
+/* END OF STANDARD INPUT STYLES */
