@@ -1,6 +1,6 @@
 # CSS only Material input
 
-The Material UI outlined and standard text input with css only
+The Material UI outlined and standard text input with CSS only
 
 ## inspiration from:
 
