@@ -2,13 +2,13 @@
 
 The Material UI outlined and standard text input with css only
 
-inspiration from:
+## inspiration from:
 
 - https://material-ui.com/components/text-fields
 
 - https://material.io/components/text-fields
 
-## GitHub Pages live version
+## GitHub Pages live version:
 
 https://leongeldsch.github.io/css_material_input
 
